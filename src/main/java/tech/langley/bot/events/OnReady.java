@@ -15,6 +15,7 @@ public class OnReady extends BotEvent {
         super();
     }
 
+    // Post commands to guilds
     private void post(List<Guild> guilds) {
         List<SlashCommandData> guildCommands = new ArrayList<>();
 

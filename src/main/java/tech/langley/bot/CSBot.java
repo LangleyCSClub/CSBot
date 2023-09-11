@@ -18,14 +18,15 @@ public class CSBot {
 
     public static void main(String[] args) {
 
+        // Initialize bot
         jda = JDABuilder.createDefault(args[0])
         .enableIntents(GatewayIntent.MESSAGE_CONTENT)
         .setActivity(Activity.of(ActivityType.PLAYING, "I AM CSBOT"))
         .build();
 
-
         try {
 
+            // Initialize handlers
             commandHandler = new CommandHandler();
             eventHandler = new EventHandler();
 
@@ -35,11 +36,11 @@ public class CSBot {
 
         } finally {
 
+            // Register handlers
             commandHandler.registerCommands();
             eventHandler.registerEvents();  
 
         }
-
 
     }
 

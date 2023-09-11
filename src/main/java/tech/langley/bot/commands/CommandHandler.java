@@ -7,17 +7,20 @@ import tech.langley.bot.commands.core.HelpCmd;
 
 public class CommandHandler {
     
-    private List<SlashCmd> commands = new ArrayList<>();
+    private List<SlashCommand> commands = new ArrayList<>();
 
+    // Register commands
     public void registerCommands() {
         new HelpCmd();
     }
 
-    public void addCommand(SlashCmd sCmd) {
+    // Add command to list
+    public void addCommand(SlashCommand sCmd) {
         this.commands.add(sCmd);
     }
 
-    public List<SlashCmd> getCmds() {
+    // Get list of commands
+    public List<SlashCommand> getCmds() {
         return this.commands;
     }
 

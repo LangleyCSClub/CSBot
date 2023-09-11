@@ -11,8 +11,9 @@ public class OnInteraction extends BotEvent {
 
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
+        // Check if command exists and executes it
         CSBot.getCmdHandler().getCmds().forEach((command) -> {
-            if(command.getName().equals(event.getName())) {
+            if(command.getName().equalsIgnoreCase(event.getName())) {
                 command.execute(event);
                 return;
             }
