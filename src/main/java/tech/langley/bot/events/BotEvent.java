@@ -4,7 +4,7 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import tech.langley.bot.CSBot;
 
-public class BotEvent extends ListenerAdapter {
+public abstract class BotEvent extends ListenerAdapter {
 
     protected JDA jda;
 
