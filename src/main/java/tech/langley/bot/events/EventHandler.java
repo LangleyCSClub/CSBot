@@ -1,4 +1,4 @@
-package tech.langley.events;
+package tech.langley.bot.events;
 
 public class EventHandler {
 

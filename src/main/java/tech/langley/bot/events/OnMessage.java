@@ -1,4 +1,4 @@
-package tech.langley.events;
+package tech.langley.bot.events;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
