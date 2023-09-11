@@ -18,13 +18,16 @@ public abstract class SlashCommand {
 
     private String description;
 
+    private String usage;
+
     private List<OptionData> oData = new ArrayList<>();
 
     private List<SubcommandData> sData = new ArrayList<>();
 
-    public SlashCommand(String name, String description) {
+    public SlashCommand(String name, String description, String usage) {
         this.name = name.toLowerCase();
         this.description = description;
+        this.usage = usage;
         CSBot.getCmdHandler().addCommand(this);
     }
 
@@ -42,6 +45,10 @@ public abstract class SlashCommand {
 
     public String getDescription() {
         return this.description;
+    }
+
+    public String getUsage() {
+        return this.usage;
     }
 
     public List<OptionData> getOptionData() {
