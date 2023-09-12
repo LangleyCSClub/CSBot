@@ -10,7 +10,7 @@ A discord bot that is made by the CS Club / Honor Society.
 3. run `mvn package -f ./pom.xml` to build the jar file
 
 ## Usage
-1. run `java -jar ./target/csbot-1.0-jar-with-dependencies.jar` to run the bot
+1. run `java -jar ./target/csbot-1.0-jar-with-dependencies.jar <token>` to run the bot
 
 ## Contributing
 1. Fork the repo
