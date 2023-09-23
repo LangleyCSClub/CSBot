@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.entities.Activity.ActivityType;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import tech.langley.bot.commands.CommandHandler;
 import tech.langley.bot.events.EventHandler;
+import tech.langley.bot.interactions.InteractionHandler;
 
 public class CSBot {
     
@@ -15,6 +16,8 @@ public class CSBot {
     private static EventHandler eventHandler;
 
     private static CommandHandler commandHandler;
+
+    private static InteractionHandler interactionHandler;
 
     public static void main(String[] args) {
 
@@ -29,6 +32,7 @@ public class CSBot {
             // Initialize handlers
             commandHandler = new CommandHandler();
             eventHandler = new EventHandler();
+            interactionHandler = new InteractionHandler();
 
         } catch (Exception e) {
 
@@ -38,7 +42,8 @@ public class CSBot {
 
             // Register handlers
             commandHandler.registerCommands();
-            eventHandler.registerEvents();  
+            eventHandler.registerEvents();
+            interactionHandler.registerInteractions();
 
         }
 
@@ -46,6 +51,10 @@ public class CSBot {
 
     public static CommandHandler getCmdHandler() {
         return commandHandler;
+    }
+
+    public static InteractionHandler gInteractionHandler() {
+        return interactionHandler;
     }
 
     public static JDA getBot() {
